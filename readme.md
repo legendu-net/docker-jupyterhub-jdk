@@ -11,6 +11,7 @@ JupyterHub with JDK 8 and Maven in Docker.
 ```
 docker run -d \
     --log-opt max-size=50m \
+    -p 8000:8000 \
     -e DOCKER_USER=`id -un` \
     -e DOCKER_USER_ID=`id -u` \
     -e DOCKER_PASSWORD=`id -un` \
