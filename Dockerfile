@@ -1,4 +1,4 @@
-FROM dclong/jupyterhub
+FROM dclong/jupyterhub-jdk
 
 RUN apt-get update -y \
     && apt-get install -y \
