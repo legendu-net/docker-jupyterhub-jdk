@@ -1,6 +1,10 @@
 # [dclong/jupyterhub-jdk](https://hub.docker.com/r/dclong/jupyterhub-jdk/)
 
 JupyterHub with JDK 8 and Maven in Docker. 
+**It is recommended that you use the image
+[dclong/jupyterhub-ds](https://hub.docker.com/r/dclong/jupyterhub-ds/)
+for data science related work.**
+Note: Python packages are managed using pip instead of conda.
 
 ## Usage in Linux/Unix
 
@@ -14,7 +18,7 @@ and mounts the current working directory and `/home` on the host machine
 to `/workdir` and `/home_host` in the container respectively.
 ```
 docker run -d \
-    --name jupyterhub-ds \
+    --name jupyterhub-jdk \
     --log-opt max-size=50m \
     -p 8000:8000 \
     -p 5006:5006 \
@@ -25,13 +29,13 @@ docker run -d \
     -e DOCKER_ADMIN_USER=`id -un` \
     -v `pwd`:/workdir \
     -v `dirname $HOME`:/home_host \
-    dclong/jupyterhub-ds
+    dclong/jupyterhub-jdk
 ```
 The following command (only works on Linux) does the same as the above one 
 except that it limits the use of CPU and memory.
 ```
 docker run -d \
-    --name jupyterhub-ds \
+    --name jupyterhub-jdk \
     --log-opt max-size=50m \
     --memory=$(($(head -n 1 /proc/meminfo | awk '{print $2}') * 4 / 5))k \
     --cpus=$((`nproc` - 1)) \
@@ -44,7 +48,7 @@ docker run -d \
     -e DOCKER_ADMIN_USER=`id -un` \
     -v `pwd`:/workdir \
     -v `dirname $HOME`:/home_host \
-    dclong/jupyterhub-ds
+    dclong/jupyterhub-jdk
 ```
 
 ## [Detailed Information](http://www.legendu.net/en/blog/my-docker-images/#list-of-images-and-detailed-information) 
