@@ -1,8 +1,8 @@
 FROM dclong/jupyterhub
 
 RUN apt-get update -y \
-    && apt-get install -y \
-        openjdk-8-jdk maven gradle \
+    && apt-get install -y openjdk-8-jdk \
+    && apt-get install -y maven gradle \
     && apt-get autoremove \
     && apt-get autoclean 
 
