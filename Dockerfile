@@ -4,7 +4,7 @@ RUN apt-get update -y \
     && apt-get install -y openjdk-8-jdk \
     && apt-get install -y maven gradle \
     && apt-get autoremove \
-    && apt-get autoclean 
+    && apt-get clean 
 
 COPY scripts /scripts
 ENV M2_HOME=/usr/share/maven
