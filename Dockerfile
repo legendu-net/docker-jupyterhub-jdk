@@ -5,7 +5,6 @@ FROM dclong/jupyterhub
 RUN apt-get update -y \
     && apt-get install -y --no-install-recommends \
         openjdk-11-jdk maven gradle \
-    && apt-get purge -y openjdk-11-jre-headless \
     && apt-get autoremove \
     && apt-get clean 
 
