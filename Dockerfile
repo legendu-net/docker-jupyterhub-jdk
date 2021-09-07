@@ -8,7 +8,7 @@ RUN apt-get update -y \
     && apt-get purge -y openjdk-11-jre-headless \
     && apt-get autoremove -y \
     && apt-get clean -y \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
 COPY scripts /scripts
 ENV M2_HOME=/usr/share/maven
