@@ -1,10 +1,8 @@
 # dclong/jupyterhub-jdk [@DockerHub](https://hub.docker.com/r/dclong/jupyterhub-jdk/) | [@GitHub](https://github.com/dclong/docker-jupyterhub-jdk)
 
-JupyterHub with JDK 8, Maven and Gradle in Docker. 
-**It is recommended that you use the image
-[dclong/jupyterhub-ds](https://hub.docker.com/r/dclong/jupyterhub-ds/)
-for data science related work.**
-Note: Python packages are managed using pip instead of conda.
+JupyterHub with JDK 11, Maven and Gradle in Docker. 
+
+## [Recommended Docker Images](http://www.legendu.net/en/blog/my-docker-images/#recommended-docker-images) 
 
 ## Prerequisite
 You need to [install Docker](http://www.legendu.net/en/blog/docker-installation/) before you use this Docker image.
