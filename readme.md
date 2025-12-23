@@ -1,6 +1,6 @@
 # dclong/jupyterhub-jdk [@DockerHub](https://hub.docker.com/r/dclong/jupyterhub-jdk/) | [@GitHub](https://github.com/dclong/docker-jupyterhub-jdk)
 
-JupyterHub with JDK 11, Maven and Gradle in Docker. 
+JupyterHub with JDK 21, Maven and Gradle in Docker.
 
 ## [Recommended Docker Images](http://www.legendu.net/en/blog/my-docker-images/#recommended-docker-images) 
 
