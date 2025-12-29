@@ -2,8 +2,8 @@
 FROM dclong/jupyterhub
 # GIT: https://github.com/legendu-net/docker-jupyterhub.git
 
-RUN apt-get update -y \
-    && apt-get install -y --no-install-recommends \
+RUN apt-get -y update \
+    && apt-get -y install --no-install-recommends \
         openjdk-21-jdk maven gradle \
     && /scripts/sys/purge_cache.sh
 
